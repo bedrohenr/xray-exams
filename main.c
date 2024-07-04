@@ -33,7 +33,7 @@ int main() {
     // Imprimindo informações do exame criado
     printf("\nExame criado:\n");
     printf("ID: %d\n", get_exam_id(exam));
-    //printf("ID do Paciente: %d\n", get_exam_pacient_id(exam));
+    printf("ID do Paciente: %d\n", get_exam_patient_id(exam));
     printf("ID do Aparelho de Raio-X: %d\n", get_exam_rx_id(exam));
     printf("Data e Hora do Exame: %s\n", asctime(get_exam_time(exam)));
 
