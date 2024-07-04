@@ -42,6 +42,7 @@ int get_exam_rx_id(Exam *exam){
     return exam->rx_id;
 }
 
+// Retorna o horário de realização do exame.
 struct tm* get_exam_time(Exam *exam){
     return exam->time;
 }
