@@ -1,20 +1,21 @@
-#include "patient.h"
+#include "patient.h" // Arquivo header
 
-#include <time.h>
+#include <stdlib.h> // malloc
 #include <string.h> // strdup
 
-typedef struct patient {
+struct patient {
     int id;
     char *name;
-    struct tm* birthdate;
+    struct tm *birthdate;
 } patient;
 
 // Cria um novo paciente, alocando memória para a estrutura, preenchendo os campos internos com os dados passados como parâmetros e retornando um ponteiro para a estrutura criada. 
 Patient *create_patient(int id, const char *name, struct tm *birthdate){
     Patient *new_patient = (Patient *)malloc(sizeof(Patient));
 
+    // Caso não seja alocada a memória
     if(new_patient == NULL){
-        perror("Failed to allocate memory for Patient");
+        perror("Não foi possível alocar memória para este paciente.");
         exit(EXIT_FAILURE);
     }   
 
