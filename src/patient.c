@@ -1,7 +1,7 @@
 #include "patient.h"
 
 #include <time.h>
-#include <stdlib.h>
+#include <string.h> // strdup
 
 typedef struct patient {
     int id;
@@ -19,7 +19,7 @@ Patient *create_patient(int id, const char *name, struct tm *birthdate){
     }   
 
     new_patient->id = id;
-    new_patient->name = name;
+    new_patient->name = strdup(name); // Reserva espaço de armazenamento para uma cópia da string name
     new_patient->birthdate = birthdate;
 
     return new_patient;
