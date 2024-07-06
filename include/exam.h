@@ -1,8 +1,6 @@
 #ifndef EXAM
 #define EXAM
 
-#include <time.h>
-
 typedef struct exam Exam;
 
 // Cria um novo exame, alocando memória para a estrutura, preenchendo os campos com os dados passados como parâmetros e retornando um ponteiro para a estrutura criada.
