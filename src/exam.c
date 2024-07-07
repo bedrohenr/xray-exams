@@ -23,16 +23,16 @@ Exam* create_exam(int id, int patient_id, int rx_id, struct tm *time){
     // Verifica se falha na alocação de memória
     if(new_exam == NULL) {
         // Mensagem de erro
-        errMessageId("\nErro.\nNao foi possível alocar memória para o exame com id", id);
+        error_message_id("\nErro.\nNao foi possível alocar memória para o exame com id", id);
         // Função para mostrar o erro e finaliza execução
-        errExit(EXIT_FAILURE);
+        error_exit(EXIT_FAILURE);
     }
 
     // Verificações das variáveis antes das atribuições
-    if(validateId(id, "id exame")) new_exam->id = id;
-    if(validateId(patient_id, "exame, id paciente")) new_exam->patient_id = patient_id;
-    if(validateId(rx_id, "id raio-x")) new_exam->rx_id = rx_id;
-    if(validateTime(time, "exame time")) new_exam->time = time;
+    if(validate_id(id, "id exame")) new_exam->id = id;
+    if(validate_id(patient_id, "exame, id paciente")) new_exam->patient_id = patient_id;
+    if(validate_id(rx_id, "id raio-x")) new_exam->rx_id = rx_id;
+    if(validate_time(time, "exame time")) new_exam->time = time;
 
     return new_exam;
 } 

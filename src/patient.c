@@ -19,15 +19,15 @@ Patient *create_patient(int id, const char *name, struct tm *birthdate){
     // Verifica se falha na alocação de memória
     if(new_patient == NULL){
         // Mensagem de erro
-        errMessageId("\nErro.\nNao foi possível alocar memória para o paciente com id", id);
+        error_message_id("\nErro.\nNao foi possível alocar memória para o paciente com id", id);
         // Função para mostrar o erro e finaliza execução
-        errExit(EXIT_FAILURE);
+        error_exit(EXIT_FAILURE);
     }   
 
     // Verificações das variáveis antes das atribuições
-    if( validateId(id, "id paciente") ) new_patient->id = id;
-    if( validateName(name, id) ) new_patient->name = strdup(name); // Reserva espaço de armazenamento para uma cópia da string name
-    if( validateTime(birthdate, "Data nascimento do paciente") ) new_patient->birthdate = birthdate;
+    if( validate_id(id, "id paciente") ) new_patient->id = id;
+    if( validate_name(name, id) ) new_patient->name = strdup(name); // Reserva espaço de armazenamento para uma cópia da string name
+    if( validate_time(birthdate, "Data nascimento do paciente") ) new_patient->birthdate = birthdate;
 
     return new_patient;
 }
