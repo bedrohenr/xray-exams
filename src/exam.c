@@ -1,8 +1,10 @@
 #include "exam.h"
+#include "functions.h"
 
 #include <time.h> // struct tm
 #include <stdio.h> // perror
 #include <stdlib.h> // malloc
+#include <string.h>
 
 struct exam {
     int id;
@@ -11,19 +13,24 @@ struct exam {
     struct tm *time;
 } exam;
 
+
 // Cria um novo exame, alocando memória para a estrutura, preenchendo os campos com os dados passados como parâmetros e retornando um ponteiro para a estrutura criada.
-Exam *create_exam(int id, int patient_id, int rx_id, struct tm *time){
+Exam* create_exam(int id, int patient_id, int rx_id, struct tm *time){
+
     Exam *new_exam = (Exam *)malloc(sizeof(Exam));
 
-    if(new_exam == NULL){
-        perror("Não foi possível alocar memória para este exame.");
-        exit(EXIT_FAILURE);
-    }   
+    if(new_exam == NULL) {
+        char msg[] = "Nao foi possivel alocar memoria para o exame com id: ";
+        char *id_string = intToString(id); 
+        strcat(msg, id_string);
 
-    new_exam->id = id;
-    new_exam->patient_id = patient_id;
-    new_exam->rx_id = rx_id;
-    new_exam->time = time;
+        err_exit(msg, EXIT_FAILURE);
+    }
+
+    if(validateId(id, "id")) new_exam->id = id;
+    if(validateId(patient_id, "id paciente")) new_exam->patient_id = patient_id;
+    if(validateId(rx_id, "id raio-x")) new_exam->rx_id = rx_id;
+    if(validateTime(time, "exame time")) new_exam->time = time;
 
     return new_exam;
 } 
