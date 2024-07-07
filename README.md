@@ -31,7 +31,7 @@ Aqui especificaremos os conteúdos dos arquivos de cabeçalho e o conteúdo dess
 
 ## Exam
 
-Define uma struct Exam que consiste de:
+Define uma struct **Exam** que consiste de:
 
 ### Variáveis
 
