@@ -113,7 +113,7 @@ Implementada por conter funções úteis para ambas **Exam** e **Patient**.
 | [validate_name(...)](src/functions.c?#L55)       | const  **char**  *name,  **int**  id     | Struct tm * |
 
 - **error_exit(...)**: Finaliza o programa com um código de erro, normalmente, EXIT_FAILURE.
-- **error_message_id(...): Mostra na tela uma mensagem de erro com um id, seja do paciente ou do exame.
+- **error_message_id(...)**: Mostra na tela uma mensagem de erro com um id, seja do paciente ou do exame.
 - **error_message_field(...)**: Mostra na tela uma mensagem de erro com o campo de onde foi encontrado o erro.
 - **validate_id(...)**: Verifica se o número é maior que zero, assim, confirmando se é um número válido. Caso não seja, usa as outras funções para mostrar uma mensagem de erro e terminando a execução.
 - **validate_time(...)**: Verifica se o ano, mês e dia, com a variável do tipo struct tm passada como argumento, são iguais a 0. Caso seja, utiliza das outras funções para mostrar uma mensagem de erro e terminar a execução.
