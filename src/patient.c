@@ -38,7 +38,7 @@ int get_patient_id(const Patient *patient){
 }
 
 // Retorna o nome do paciente.
-const char *get_patient_name(const Patient *patient){
+const char* get_patient_name(const Patient *patient){
     return patient->name;
 }
 

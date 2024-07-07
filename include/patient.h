@@ -16,7 +16,7 @@ void destroy_patient(Patient *patient);
 int get_patient_id(const Patient *patient);
 
 // Retorna o nome do paciente.
-const char *get_patient_name(const Patient *patient);
+const char* get_patient_name(const Patient *patient);
 
 // Retorna a data de nascimento do paciente. 
 struct tm* get_patient_birthdate(const Patient *patient);
