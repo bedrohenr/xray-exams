@@ -7,7 +7,7 @@
 #include <math.h>
 
 void err_exit(char *msg, int err_code){
-    printf(msg);
+    printf("%s",msg);
     exit(err_code);
 }
 
