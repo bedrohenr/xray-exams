@@ -42,7 +42,7 @@ Define uma struct Exam que consiste de:
 | [rx_id](src/exam.c?#L14)      | Inteiro       |
 | [time](src/exam.c?#L15)       | Struct tm *   |
 
- - **[id](src/exam.c?#L12)**: Armazena o número identificador do exame.
+ - **id**: Armazena o número identificador do exame.
  - patient_id: Armazena o número identificador do paciente vinculado ao exame.
  - rx_id: Armazena o número identificador do exame de raio-x deste exame.
  - time: Armazena a data e hora que o exame foi feito. Consiste em um ponteiro para uma instanciação da struct **tm**, da biblioteca <time.h>.
