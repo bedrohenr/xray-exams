@@ -15,12 +15,12 @@ $ make
 Isso irá executar o arquivo Makefile no _root_ do repositório.
 
 ### Testando
-Para executar o teste basta, após executar o comando abaixo:
+Para executar o teste bastas executar o comando abaixo:
 
 ``` bash
 $ make run
 ```
-ou, opcionalmente, se já estiver executado o comando **make**:
+ou, opcionalmente, após compilar, executar diretamente o arquivo **main.c**:
 ``` bash
 $ ./main	
 ```
