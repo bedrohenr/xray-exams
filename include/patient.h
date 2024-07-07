@@ -1,7 +1,7 @@
 #ifndef PATIENT
 #define PATIENT
 
-#include <time.h>
+#include <time.h> // struct tm
 
 typedef struct patient Patient;
 
