@@ -21,7 +21,4 @@ int validate_time(const struct tm* time, char *campo);
 // Verifica se o a variável string está vazia
 int validate_name(const char* name, int id);
 
-// Recebe um número inteiro e o retorna em char *, ou string
-char* int_to_string(int num);
-
 #endif

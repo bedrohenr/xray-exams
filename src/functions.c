@@ -4,8 +4,7 @@
 // Arquivos de cabeçalho
 #include <stdlib.h> // malloc, EXIT_FAILURE
 #include <string.h> // strcmp
-#include <stdio.h> // printf, sprintf
-#include <math.h> // ceil
+#include <stdio.h> // printf
 
 // Mostra uma mensagem de erro e para o programa com o código de erro
 void error_exit(int err_code){
@@ -62,18 +61,4 @@ int validate_name(const char* name, int id){
         return 0;
     }
     return 1;
-}
-
-// Recebe um número inteiro e o retorna em char *, ou string
-char* int_to_string(int num){
-    // Calcula a quantidade de caracteres em um número com um a mais
-    int tamanho = (int)((ceil(log10(num))+1)*sizeof(char));
-
-    // Aloca memória para o valor ser acessível fora da função
-    char *str = (char *)malloc(sizeof(char) * tamanho);
-
-    // Transforma de int em char *
-    sprintf(str, "%d", num);
-
-    return str;
 }
