@@ -32,7 +32,6 @@ Patient *create_patient(int id, const char *name, struct tm *birthdate){
 
 // Libera a memória alocada para a estrutura do paciente. 
 void destroy_patient(Patient *patient){
-    free(patient->birthdate);
     free(patient);
 }
 

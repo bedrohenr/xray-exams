@@ -37,7 +37,6 @@ Exam* create_exam(int id, int patient_id, int rx_id, struct tm *time){
 
 // Libera a memória alocada para a estrutura de exame.
 void destroy_exam(Exam *exam){
-    free(exam->time);
     free(exam);
 } 
 
