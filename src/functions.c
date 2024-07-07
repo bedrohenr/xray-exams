@@ -54,8 +54,6 @@ int validateName(const char* name, int id){
 
 char* intToString(int num){
     int tamanho = (int)((ceil(log10(num))+1)*sizeof(char));
-    // char local_str[tamanho];
-    // itoa(num, local_str, 10);
 
     char *str = (char *)malloc(sizeof(char) * tamanho);
     sprintf(str, "%d", num);
