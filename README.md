@@ -20,7 +20,7 @@ Para executar o teste bastas executar o comando abaixo:
 ``` bash
 $ make run
 ```
-ou, opcionalmente, após compilar, executar diretamente o arquivo **main.c**:
+ou, opcionalmente, após compilar:
 ``` bash
 $ ./main	
 ```
