@@ -35,21 +35,21 @@ void destroy_exam(Exam *exam){
 } 
 
 // Retorna a identificação única do exame.
-int get_exam_id(Exam *exam){
+int get_exam_id(const Exam *exam){
     return exam->id;
 } 
 
 // Retorna a identificação única do paciente associado ao exame.
-int get_exam_patient_id(Exam *exam){
+int get_exam_patient_id(const Exam *exam){
     return exam->patient_id;
 }
 
 // Retorna a identificação única do aparelho de raio-X utilizado no exame.
-int get_exam_rx_id(Exam *exam){
+int get_exam_rx_id(const Exam *exam){
     return exam->rx_id;
 }
 
 // Retorna o horário de realização do exame.
-struct tm* get_exam_time(Exam *exam){
+struct tm* get_exam_time(const Exam *exam){
     return exam->time;
 }
