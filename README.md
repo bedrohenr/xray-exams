@@ -75,11 +75,11 @@ Define a struct **Patient**, que consiste de:
 | ------------------------------- | ------------- |
 | [id](src/patient.c?#L9)         | Inteiro       |
 | [name](src/patient.c?#L10)       | Char *        |
-| [birthdate](src/patient.c?#L11)   | struct tm *   #
+| [birthdate](src/patient.c?#L11)   | Struct tm *  |
 
- - id: Armazena o número identificador do exame.
- - patient_id: Armazena o número identificador do paciente vinculado ao exame.
- - rx_id: Armazena o número identificador do exame de raio-x deste exame.
+ - **id**: Armazena o número identificador do exame.
+ - **patient_id**: Armazena o número identificador do paciente vinculado ao exame.
+ - **rx_id**: Armazena o número identificador do exame de raio-x deste exame.
 
 ### Funções
 
@@ -110,7 +110,7 @@ Implementada por conter funções úteis para ambas **Exam** e **Patient**.
 | [error_message_field(...)](src/functions.c?#L18) | const  **char**  *msg,  **int**  id      | Void        |
 | [validate_id(...)](src/functions.c?#L23)         | **int**  num,  **char**  *campo          | Char *      |
 | [validate_time(...)](src/functions.c?#L36)       | const  **struct  tm***  time,  **char**  *campo | Inteiro     |
-| [validate_name(...)](src/functions.c?#L55)       | const  **char**  *name,  **int**  id     | struct tm * |
+| [validate_name(...)](src/functions.c?#L55)       | const  **char**  *name,  **int**  id     | Struct tm * |
 
 - **error_exit(...)**: Finaliza o programa com um código de erro, normalmente, EXIT_FAILURE.
 - **error_message_id(...): Mostra na tela uma mensagem de erro com um id, seja do paciente ou do exame.
