@@ -1,5 +1,7 @@
 #include "patient.h" // Arquivo header
+#include "functions.h" // Arquivo header com funções
 
+#include <stdio.h> // perror
 #include <stdlib.h> // malloc
 #include <string.h> // strdup
 
@@ -15,13 +17,15 @@ Patient *create_patient(int id, const char *name, struct tm *birthdate){
 
     // Caso não seja alocada a memória
     if(new_patient == NULL){
-        perror("Não foi possível alocar memória para este paciente.");
-        exit(EXIT_FAILURE);
+        char msg[] = "Erro. Não foi possível alocar memória para o paciente: ";
+        char *id_string = intToString(id);
+        strcat(msg, id_string);
+        err_exit(msg, EXIT_FAILURE);
     }   
 
-    new_patient->id = id;
-    new_patient->name = strdup(name); // Reserva espaço de armazenamento para uma cópia da string name
-    new_patient->birthdate = birthdate;
+    if( validateId(id, "id paciente") ) new_patient->id = id;
+    if( validateName(name, id) ) new_patient->name = strdup(name); // Reserva espaço de armazenamento para uma cópia da string name
+    if( validateTime(birthdate, "Data nascimento do paciente") ) new_patient->birthdate = birthdate;
 
     return new_patient;
 }
