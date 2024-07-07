@@ -1,8 +1,7 @@
 #include "patient.h"
 #include "exam.h"
 
-#include <stdio.h>
-#include <time.h>
+#include <stdio.h> // printf...
 
 // Função principal de teste
 int main() {
