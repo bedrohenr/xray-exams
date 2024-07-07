@@ -43,9 +43,9 @@ Define uma struct Exam que consiste de:
 | [time](src/exam.c?#L15)       | Struct tm *   |
 
  - **id**: Armazena o número identificador do exame.
- - patient_id: Armazena o número identificador do paciente vinculado ao exame.
- - rx_id: Armazena o número identificador do exame de raio-x deste exame.
- - time: Armazena a data e hora que o exame foi feito. Consiste em um ponteiro para uma instanciação da struct **tm**, da biblioteca <time.h>.
+ - **patient_id**: Armazena o número identificador do paciente vinculado ao exame.
+ - **rx_id**: Armazena o número identificador do exame de raio-x deste exame.
+ - **time**: Armazena a data e hora que o exame foi feito. Consiste em um ponteiro para uma instanciação da struct **tm**, da biblioteca <time.h>.
 
  ### Funções
  
@@ -58,12 +58,12 @@ Define uma struct Exam que consiste de:
 | [get_exam_rx_id(...)](src/exam.c?#L56)      | **Exam**  *exam  | Inteiro       |
 | [get_exam_time(...)](src/exam.c?#L61)       | **Exam**  *exam  | Inteiro       |
 
-- create_exam(...): Realiza a alocação de memória e atribuições para as variáveis, criando um novo exame. 
-- destroy_exam(...): Apaga o registro do exame em questão, desalocando sua memória.
-- get_exam_id(...): Retorna o id do paciente passado no argumento.
-- get_exam_patient_id(...): Retorna o id do paciente vinculado ao exame.
-- get_exam_rx_id(...): Retorna o id do raio x vinculado ao exame.
-- get_exam_time(...): Retorna a data e hora que foi realizado o exame.
+- **create_exam(...)**: Realiza a alocação de memória e atribuições para as variáveis, criando um novo exame. 
+- **destroy_exam(...)**: Apaga o registro do exame em questão, desalocando sua memória.
+- **get_exam_id(...)**: Retorna o id do paciente passado no argumento.
+- **get_exam_patient_id(...)**: Retorna o id do paciente vinculado ao exame.
+- **get_exam_rx_id(...)**: Retorna o id do raio x vinculado ao exame.
+- **get_exam_time(...)**: Retorna a data e hora que foi realizado o exame.
 
 ## Patient
 
@@ -91,11 +91,11 @@ Define a struct **Patient**, que consiste de:
 | [get_patient_name(...)](src/patient.c?#L46)      | **Patient**  *patient | Char *         |
 | [get_patient_birthdate(...)](src/patient.c?#L51) | **Patient**  *patient | struct tm *    |
 
-- create_patient(...): Realiza a alocação de memória e atribuições para as variáveis, criando um novo paciente.
-- destroy_patient(...): Apaga o registro do paciente em questão, desalocando sua memória.
-- get_patient_id(...): Retorna o id do paciente passado no argumento.
-- get_patient_name(...): Retorna o nome do paciente passado no argumento.
-- get_patient_birthdate(...): Retorna a data de aniversário do paciente.
+- **create_patient(...)**: Realiza a alocação de memória e atribuições para as variáveis, criando um novo paciente.
+- **destroy_patient(...)**: Apaga o registro do paciente em questão, desalocando sua memória.
+- **get_patient_id(...)**: Retorna o id do paciente passado no argumento.
+- **get_patient_name(...)**: Retorna o nome do paciente passado no argumento.
+- **get_patient_birthdate(...)**: Retorna a data de aniversário do paciente.
 
 
 ## Functions
@@ -112,9 +112,9 @@ Implementada por conter funções úteis para ambas **Exam** e **Patient**.
 | [validate_time(...)](src/functions.c?#L36)       | const  **struct  tm***  time,  **char**  *campo | Inteiro     |
 | [validate_name(...)](src/functions.c?#L55)       | const  **char**  *name,  **int**  id     | struct tm * |
 
-- error_exit(...): Finaliza o programa com um código de erro, normalmente, EXIT_FAILURE.
-- error_message_id(...): Mostra na tela uma mensagem de erro com um id, seja do paciente ou do exame.
-- error_message_field(...): Mostra na tela uma mensagem de erro com o campo de onde foi encontrado o erro.
-- validate_id(...): Verifica se o número é maior que zero, assim, confirmando se é um número válido. Caso não seja, usa as outras funções para mostrar uma mensagem de erro e terminando a execução.
-- validate_time(...): Verifica se o ano, mês e dia, com a variável do tipo struct tm passada como argumento, são iguais a 0. Caso seja, utiliza das outras funções para mostrar uma mensagem de erro e terminar a execução.
-- validate_name(...): Verifica se a variável char* passada com argumento é vazia. Caso seja, utiliza as outras funções para mostrar uma mensagem de erro e terminar a execução.
+- **error_exit(...)**: Finaliza o programa com um código de erro, normalmente, EXIT_FAILURE.
+- **error_message_id(...): Mostra na tela uma mensagem de erro com um id, seja do paciente ou do exame.
+- **error_message_field(...)**: Mostra na tela uma mensagem de erro com o campo de onde foi encontrado o erro.
+- **validate_id(...)**: Verifica se o número é maior que zero, assim, confirmando se é um número válido. Caso não seja, usa as outras funções para mostrar uma mensagem de erro e terminando a execução.
+- **validate_time(...)**: Verifica se o ano, mês e dia, com a variável do tipo struct tm passada como argumento, são iguais a 0. Caso seja, utiliza das outras funções para mostrar uma mensagem de erro e terminar a execução.
+- **validate_name(...)**: Verifica se a variável char* passada com argumento é vazia. Caso seja, utiliza as outras funções para mostrar uma mensagem de erro e terminar a execução.
