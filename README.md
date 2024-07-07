@@ -2,7 +2,7 @@
 Este código em C consiste em simular o processo de realização de exames de raio-X de tórax em um hospital, com ênfase na organização da fila para laudo médico.
 
 ## Dependências
-- **GCC**, posteriormente usado para compilar o código em C.
+- **[GCC](https://gcc.gnu.org/install/index.html)**, posteriormente usado para compilar o código em C.
 
 ## Execução
 
