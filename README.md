@@ -37,10 +37,10 @@ Define uma struct Exam que consiste de:
 
 | Variável                        | Tipo          |
 | --------------------------------| --------------|
-| [id](src/exam.c?L#11)         | Inteiro       |
-| [patient_id](src/exam.c?L#11) | Inteiro       |
-| [rx_id](src/exam.c?L#11)      | Inteiro       |
-| [time](src/exam.c?L#11)       | Struct tm *   |
+| [id](src/exam.c?#L11)         | Inteiro       |
+| [patient_id](src/exam.c?#L11) | Inteiro       |
+| [rx_id](src/exam.c?#L11)      | Inteiro       |
+| [time](src/exam.c?#L11)       | Struct tm *   |
 
  - id: Armazena o número identificador do exame.
  - patient_id: Armazena o número identificador do paciente vinculado ao exame.
