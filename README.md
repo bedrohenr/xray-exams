@@ -51,12 +51,12 @@ Define uma struct Exam que consiste de:
  
 | Função                                        | Recebe           | Retorna       |
 | --------------------------------------------- | ---------------- | ------------- |
-| [create_exam(...)](src/base/p_init.c)         | **int**  id,  **int**  patient_id,  **int**  rx_id,  **struct  tm**  *time | Exam *       |
-| [destroy_exam(...)](src/base/p_init.c)        | **Exam**  *exam  | void          |
-| [get_exam_id(...)](src/base/p_init.c)         | **Exam**  *exam  | Inteiro       |
-| [get_exam_patient_id(...)](src/base/p_init.c) | **Exam**  *exam  | Inteiro       |
-| [get_exam_rx_id(...)](src/base/p_init.c)      | **Exam**  *exam  | Inteiro       |
-| [get_exam_time(...)](src/base/p_init.c)       | **Exam**  *exam  | Inteiro       |
+| [create_exam(...)](src/exam.c?#L19)         | **int**  id,  **int**  patient_id,  **int**  rx_id,  **struct  tm**  *time | Exam *       |
+| [destroy_exam(...)](src/exam.c?#L41)        | **Exam**  *exam  | void          |
+| [get_exam_id(...)](src/exam.c?#L46)         | **Exam**  *exam  | Inteiro       |
+| [get_exam_patient_id(...)](src/exam.c?#L51) | **Exam**  *exam  | Inteiro       |
+| [get_exam_rx_id(...)](src/exam.c?#L56)      | **Exam**  *exam  | Inteiro       |
+| [get_exam_time(...)](src/exam.c?#L61)       | **Exam**  *exam  | Inteiro       |
 
 - create_exam(...): Realiza a alocação de memória e atribuições para as variáveis, criando um novo exame. 
 - destroy_exam(...): Apaga o registro do exame em questão, desalocando sua memória.
@@ -73,22 +73,23 @@ Define a struct **Patient**, que consiste de:
 
 | Variável                        | Tipo          |
 | ------------------------------- | ------------- |
-| [id](src/base/p_init.c)         | Inteiro       |
-| [name](src/base/p_init.c)       | Char *        |
-| [birthdate](src/base/p_init.c)  | struct tm *   |
+| [id](src/patient.c?#L8)         | Inteiro       |
+| [name](src/patient.c?#L8)       | Char *        |
+| [birthdate](src/patient.c?L8)   | struct tm *   |
 
  - id: Armazena o número identificador do exame.
  - patient_id: Armazena o número identificador do paciente vinculado ao exame.
  - rx_id: Armazena o número identificador do exame de raio-x deste exame.
 
 ### Funções
+
 | Função                                          | Recebe                |Retorna         |
 | ----------------------------------------------- | --------------------- | -------------- |
-| [create_patient(...)](src/base/p_init.c)        | **int**  id,  **char**  *name, ** struct  tm**  *birthdate | Patient *       |
-| [destroy_patient(...)](src/base/p_init.c)       | **Patient**  *patient | void           |
-| [get_patient_id(...)](src/base/p_init.c)        | **Patient**  *patient | Inteiro        |
-| [get_patient_name(...)](src/base/p_init.c)      | **Patient**  *patient | Char *         |
-| [get_patient_birthdate(...)](src/base/p_init.c) | **Patient**  *patient | struct tm *    |
+| [create_patient(...)](src/patient.c?#L15)        | **int**  id,  **char**  *name, ** struct  tm**  *birthdate | Patient *       |
+| [destroy_patient(...)](src/patient.c?#L36)       | **Patient**  *patient | void           |
+| [get_patient_id(...)](src/patient.c?#L41)        | **Patient**  *patient | Inteiro        |
+| [get_patient_name(...)](src/patient.c?#L46)      | **Patient**  *patient | Char *         |
+| [get_patient_birthdate(...)](src/patient.c?#L51) | **Patient**  *patient | struct tm *    |
 
 - create_patient(...): Realiza a alocação de memória e atribuições para as variáveis, criando um novo paciente.
 - destroy_patient(...): Apaga o registro do paciente em questão, desalocando sua memória.
@@ -97,17 +98,19 @@ Define a struct **Patient**, que consiste de:
 - get_patient_birthdate(...): Retorna a data de aniversário do paciente.
 
 
-## Funções
+## Functions
 Implementada por conter funções úteis para ambas **Exam** e **Patient**.
+
+### Funções
 
 | Função                                        |  Recebe                                  | Retorna     |
 | ----------------------------------------------|----------------------------------------- | ----------- |
-| [error_exit(...)](src/base/p_init.c)          | **int** error_code                       | Void        |
-| [error_message_id(...)](src/base/p_init.c)    | const  **char**  *msg,  **char**  *campo | Void        |
-| [error_message_field(...)](src/base/p_init.c) | const  **char**  *msg,  **int**  id      | Void        |
-| [validate_id(...)](src/base/p_init.c)         | **int**  num,  **char**  *campo          | Char *      |
-| [validate_time(...)](src/base/p_init.c)       | const  **struct  tm***  time,  **char**  *campo | Inteiro     |
-| [validate_name(...)](src/base/p_init.c)       | const  **char**  *name,  **int**  id     | struct tm * |
+| [error_exit(...)](src/functions.c?#L10)          | **int** error_code                       | Void        |
+| [error_message_id(...)](src/functions.c?#L14)    | const  **char**  *msg,  **char**  *campo | Void        |
+| [error_message_field(...)](src/functions.c?#L18) | const  **char**  *msg,  **int**  id      | Void        |
+| [validate_id(...)](src/functions.c?#L23)         | **int**  num,  **char**  *campo          | Char *      |
+| [validate_time(...)](src/functions.c?#L36)       | const  **struct  tm***  time,  **char**  *campo | Inteiro     |
+| [validate_name(...)](src/functions.c?#L55)       | const  **char**  *name,  **int**  id     | struct tm * |
 
 - error_exit(...): Finaliza o programa com um código de erro, normalmente, EXIT_FAILURE.
 - error_message_id(...): Mostra na tela uma mensagem de erro com um id, seja do paciente ou do exame.
