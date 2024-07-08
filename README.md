@@ -46,18 +46,12 @@ Define uma struct **Exam** que consiste de:
  
 | Função                    | Recebe           | Execução | Retorna       |
 | ------------------------- | ---------------- | -------- | ------------- |
-| [create_exam(...)](src/exam.c?#L19)         | **int**  id,  **int**  patient_id,  **int**  rx_id,  **struct  tm**  *time | Realiza a alocação de memória e atribuições para as variáveis, criando um novo exame. 
-|Exam *       |
-| [destroy_exam(...)](src/exam.c?#L41)        | **Exam**  *exam  | Apaga o registro do exame em questão, desalocando sua memória.
-| void          |
-| [get_exam_id(...)](src/exam.c?#L46)         | **Exam**  *exam  | Retorna o id do paciente passado no argumento.
-| Inteiro       |
-| [get_exam_patient_id(...)](src/exam.c?#L51) | **Exam**  *exam  | Retorna o id do paciente vinculado ao exame.
-| Inteiro       |
-| [get_exam_rx_id(...)](src/exam.c?#L56)      | **Exam**  *exam  | Retorna o id do raio x vinculado ao exame.
-| Inteiro       |
-| [get_exam_time(...)](src/exam.c?#L61)       | **Exam**  *exam  | Retorna a data e hora que foi realizado o exame.
-| Inteiro       |
+| [create_exam(...)](src/exam.c?#L19)         | **int**  id,  **int**  patient_id,  **int**  rx_id,  **struct  tm**  *time | Realiza a alocação de memória e atribuições para as variáveis, criando um novo exame. |Exam *       |
+| [destroy_exam(...)](src/exam.c?#L41)        | **Exam**  *exam  | Apaga o registro do exame em questão, desalocando sua memória. | void          |
+| [get_exam_id(...)](src/exam.c?#L46)         | **Exam**  *exam  | Retorna o id do paciente passado no argumento. | Inteiro       |
+| [get_exam_patient_id(...)](src/exam.c?#L51) | **Exam**  *exam  | Retorna o id do paciente vinculado ao exame. | Inteiro       |
+| [get_exam_rx_id(...)](src/exam.c?#L56)      | **Exam**  *exam  | Retorna o id do raio x vinculado ao exame. | Inteiro       |
+| [get_exam_time(...)](src/exam.c?#L61)       | **Exam**  *exam  | Retorna a data e hora que foi realizado o exame. | Inteiro       |
 
 ## Patient
 
