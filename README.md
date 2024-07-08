@@ -47,7 +47,7 @@ Define uma struct **Exam** que consiste de:
 | Função                    | Recebe           | Execução | Retorna       |
 | ------------------------- | ---------------- | -------- | ------------- |
 | [create_exam(...)](src/exam.c?#L19)         | **int**  id,  **int**  patient_id,  **int**  rx_id,  **struct  tm**  *time | Realiza a alocação de memória e atribuições para as variáveis, criando um novo exame. |Exam *       |
-| [destroy_exam(...)](src/exam.c?#L41)        | **Exam**  *exam  | Apaga o registro do exame em questão, desalocando sua memória. |  |
+| [destroy_exam(...)](src/exam.c?#L41)        | **Exam**  *exam  | Apaga o registro do exame em questão, desalocando-o da memória. |  |
 | [get_exam_id(...)](src/exam.c?#L46)         | const **Exam**  *exam  | Retorna o id do paciente passado no argumento. | Inteiro       |
 | [get_exam_patient_id(...)](src/exam.c?#L51) | const **Exam**  *exam  | Retorna o id do paciente vinculado ao exame. | Inteiro       |
 | [get_exam_rx_id(...)](src/exam.c?#L56)      | const **Exam**  *exam  | Retorna o id do raio x vinculado ao exame. | Inteiro       |
@@ -70,7 +70,7 @@ Define a struct **Patient**, que consiste de:
 | Função                                           | Recebe                | Execução | Retorna        |
 | ------------------------------------------------ | --------------------- | -------- |-------------- |
 | [create_patient(...)](src/patient.c?#L15)        | **int**  id,  const **char**  *name, **struct  tm**  *birthdate | Realiza a alocação de memória e atribuições para as variáveis, criando um novo paciente.| Patient * |
-| [destroy_patient(...)](src/patient.c?#L36)       | **Patient**  *patient | Apaga o registro do paciente em questão, desalocando sua memória.|  |
+| [destroy_patient(...)](src/patient.c?#L36)       | **Patient**  *patient | Apaga o registro do paciente em questão, desalocando-o da memória.|  |
 | [get_patient_id(...)](src/patient.c?#L41)        | const **Patient**  *patient | Retorna o id do paciente passado no argumento.| Inteiro |
 | [get_patient_name(...)](src/patient.c?#L46)      | const **Patient**  *patient | Retorna o nome do paciente passado no argumento.| Char * |
 | [get_patient_birthdate(...)](src/patient.c?#L51) | const **Patient**  *patient | Retorna a data de aniversário do paciente.| Struct tm * |
