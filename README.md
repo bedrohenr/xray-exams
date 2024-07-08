@@ -83,8 +83,8 @@ Implementada por conter funções úteis para ambas **Exam** e **Patient**.
 | Função                                           |  Recebe                                  | Execução | Retorna     |
 | ------------------------------------------------ | ---------------------------------------- | -------- | ----------- |
 | [error_exit(...)](src/functions.c?#L10)          | **int** error_code                       | Finaliza o programa com um código de erro, normalmente, EXIT_FAILURE.|  |
-| [error_message_id(...)](src/functions.c?#L14)    | const  **char**  *msg,  **char**  *campo | Mostra na tela uma mensagem de erro com um id, seja do paciente ou do exame. |  |
-| [error_message_field(...)](src/functions.c?#L18) | const  **char**  *msg,  **int**  id      | Mostra na tela uma mensagem de erro com o campo de onde foi encontrado o erro. |  |
+| [error_message_id(...)](src/functions.c?#L14)    | const  **char**  *msg,  **int**  id | Mostra na tela uma mensagem de erro com um id, seja do paciente ou do exame. |  |
+| [error_message_field(...)](src/functions.c?#L18) | const  **char**  *msg,  **char** campo | Mostra na tela uma mensagem de erro com o campo de onde foi encontrado o erro. |  |
 | [validate_id(...)](src/functions.c?#L23)         | **int**  num,  **char**  *campo          | Verifica se o número é maior que zero, assim, confirmando se é um número válido. Caso não seja, usa as outras funções para mostrar uma mensagem de erro e terminando a execução.| Char * |
 | [validate_time(...)](src/functions.c?#L36)       | const  **struct  tm***  time,  **char**  *campo | Verifica se o ano, mês e dia, com a variável do tipo struct tm passada como argumento, são iguais a 0. Caso seja, utiliza das outras funções para mostrar uma mensagem de erro e terminar a execução.|  Inteiro     |
 | [validate_name(...)](src/functions.c?#L55)       | const  **char**  *name,  **int**  id     | Verifica se a variável char* passada com argumento é vazia. Caso seja, utiliza as outras funções para mostrar uma mensagem de erro e terminar a execução. | Struct tm * |
