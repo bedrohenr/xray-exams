@@ -71,11 +71,12 @@ Define a struct **Patient**, que consiste de:
 
 ### Variáveis
 
-| Variável                        | Tipo          |
-| ------------------------------- | ------------- |
-| [id](src/patient.c?#L9)         | Inteiro       |
-| [name](src/patient.c?#L10)       | Char *        |
-| [birthdate](src/patient.c?#L11)   | Struct tm *  |
+| Variável                        | Tipo           | Finalidade |
+| ------------------------------- | -------------- | --------------------------------------------------------------- |
+| [id](src/patient.c?#L9)         | Inteiro        | Armazena o número identificador do exame.                       |
+| [name](src/patient.c?#L10)      | Char *         | Armazena o número identificador do paciente vinculado ao exame. |
+| [birthdate](src/patient.c?#L11) | Struct tm *    | Armazena o número identificador do exame de raio-x deste exame. |
+
 
  - **id**: Armazena o número identificador do exame.
  - **patient_id**: Armazena o número identificador do paciente vinculado ao exame.
@@ -85,7 +86,7 @@ Define a struct **Patient**, que consiste de:
 
 | Função                                          | Recebe                |Retorna         |
 | ----------------------------------------------- | --------------------- | -------------- |
-| [create_patient(...)](src/patient.c?#L15)        | **int**  id,  **char**  *name, ** struct  tm**  *birthdate | Patient *       |
+| [create_patient(...)](src/patient.c?#L15)        | **int**  id,  **char**  *name, **struct  tm**  *birthdate | Patient *       |
 | [destroy_patient(...)](src/patient.c?#L36)       | **Patient**  *patient | void           |
 | [get_patient_id(...)](src/patient.c?#L41)        | **Patient**  *patient | Inteiro        |
 | [get_patient_name(...)](src/patient.c?#L46)      | **Patient**  *patient | Char *         |
