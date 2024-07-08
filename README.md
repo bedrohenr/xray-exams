@@ -77,20 +77,15 @@ Define a struct **Patient**, que consiste de:
 | [name](src/patient.c?#L10)      | Char *         | Armazena o número identificador do paciente vinculado ao exame. |
 | [birthdate](src/patient.c?#L11) | Struct tm *    | Armazena o número identificador do exame de raio-x deste exame. |
 
-
- - **id**: Armazena o número identificador do exame.
- - **patient_id**: Armazena o número identificador do paciente vinculado ao exame.
- - **rx_id**: Armazena o número identificador do exame de raio-x deste exame.
-
 ### Funções
 
-| Função                                          | Recebe                |Retorna         |
-| ----------------------------------------------- | --------------------- | -------------- |
-| [create_patient(...)](src/patient.c?#L15)        | **int**  id,  **char**  *name, **struct  tm**  *birthdate | Patient *       |
-| [destroy_patient(...)](src/patient.c?#L36)       | **Patient**  *patient | void           |
-| [get_patient_id(...)](src/patient.c?#L41)        | **Patient**  *patient | Inteiro        |
-| [get_patient_name(...)](src/patient.c?#L46)      | **Patient**  *patient | Char *         |
-| [get_patient_birthdate(...)](src/patient.c?#L51) | **Patient**  *patient | struct tm *    |
+| Função                                           | Recebe                | Execução | Retorna        |
+| ------------------------------------------------ | --------------------- | -------- |-------------- |
+| [create_patient(...)](src/patient.c?#L15)        | **int**  id,  **char**  *name, **struct  tm**  *birthdate | Realiza a alocação de memória e atribuições para as variáveis, criando um novo paciente.| Patient *       |
+| [destroy_patient(...)](src/patient.c?#L36)       | **Patient**  *patient | Apaga o registro do paciente em questão, desalocando sua memória.| Void           |
+| [get_patient_id(...)](src/patient.c?#L41)        | **Patient**  *patient | Retorna o id do paciente passado no argumento.| Inteiro        |
+| [get_patient_name(...)](src/patient.c?#L46)      | **Patient**  *patient | Retorna o nome do paciente passado no argumento.| Char *         |
+| [get_patient_birthdate(...)](src/patient.c?#L51) | **Patient**  *patient | Retorna a data de aniversário do paciente.| Struct tm *    |
 
 - **create_patient(...)**: Realiza a alocação de memória e atribuições para as variáveis, criando um novo paciente.
 - **destroy_patient(...)**: Apaga o registro do paciente em questão, desalocando sua memória.
